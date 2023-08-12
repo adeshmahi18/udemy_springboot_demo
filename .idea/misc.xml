@@ -5,6 +5,12 @@
       <list>
         <option value="$PROJECT_DIR$/employeeservice/employeeservice/pom.xml" />
         <option value="$PROJECT_DIR$/departmentservices/departmentservices/pom.xml" />
+        <option value="$USER_HOME$/Documents/service-registry/pom.xml" />
+        <option value="$PROJECT_DIR$/serviceDiscovery/pom.xml" />
+        <option value="$PROJECT_DIR$/departmentservices/pom.xml" />
+        <option value="$PROJECT_DIR$/employeeservice/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/configserver/pom.xml" />
       </list>
     </option>
   </component>

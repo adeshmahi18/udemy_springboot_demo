@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/departmentservices/departmentservices/departmentservices.iml" filepath="$PROJECT_DIR$/departmentservices/departmentservices/departmentservices.iml" />
-      <module fileurl="file://$PROJECT_DIR$/employeeservice/employeeservice/employeeservice.iml" filepath="$PROJECT_DIR$/employeeservice/employeeservice/employeeservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/departmentservices/departmentservices.iml" filepath="$PROJECT_DIR$/departmentservices/departmentservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/employeeservice/employeeservice.iml" filepath="$PROJECT_DIR$/employeeservice/employeeservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serviceDiscovery/serviceDiscovery.iml" filepath="$PROJECT_DIR$/serviceDiscovery/serviceDiscovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sprinboot-microservice.iml" filepath="$PROJECT_DIR$/.idea/sprinboot-microservice.iml" />
     </modules>
   </component>
