@@ -41,7 +41,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                  .retrieve().bodyToMono(DepartmentDto.class).block();*/
 
 
-        System.out.println("====================="+employee.getDepartmentCode());
+        //System.out.println("====================="+employee.getDepartmentCode());
 
          DepartmentDto departmentDto = apiClient.getDepartment(employee.getDepartmentCode());
 

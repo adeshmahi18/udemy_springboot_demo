@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="employeeservice" />
+        <module name="config-server" />
         <module name="serviceDiscovery" />
         <module name="departmentservices" />
         <module name="configserver" />
@@ -15,6 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config-server" target="17" />
       <module name="configserver" target="17" />
       <module name="departmentservices" target="17" />
       <module name="employeeservice" target="17" />
@@ -25,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-server" options="-parameters" />
       <module name="configserver" options="-parameters" />
       <module name="departmentservices" options="-parameters" />
       <module name="employeeservice" options="-parameters" />

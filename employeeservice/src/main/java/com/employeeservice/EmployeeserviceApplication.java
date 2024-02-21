@@ -11,7 +11,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 @SpringBootApplication
 @EnableFeignClients
 @EnableAutoConfiguration
-public class EmployeeserviceApplication {
+
+ public class EmployeeserviceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeserviceApplication.class, args);
