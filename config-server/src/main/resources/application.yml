@@ -1,24 +1,10 @@
 server:
-  port: 8071
+  port: 8888
 
 spring:
-  application:
-    name: "configserver"
-  profiles:
-    active: "git"
-
   cloud:
     config:
       server:
         git:
-          uri: "https://github.com/adeshmahi18/configFiles.git"
+          uri: https://github.com/adeshmahi18/configFiles
           default-label: main
-          timeout: 5
-          clone-on-start: true
-          force-pull: true
-encrypt:
-  key: "721DASDASDASD"
-
-
-app:
-    name: "Prod_Employee_Application_From_Config"
