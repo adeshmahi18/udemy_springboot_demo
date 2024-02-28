@@ -6,7 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/departmentservices/departmentservices.iml" filepath="$PROJECT_DIR$/departmentservices/departmentservices.iml" />
       <module fileurl="file://$PROJECT_DIR$/employeeservice/employeeservice.iml" filepath="$PROJECT_DIR$/employeeservice/employeeservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gatewayserver/gatewayserver.iml" filepath="$PROJECT_DIR$/gatewayserver/gatewayserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/serviceDiscovery/serviceDiscovery.iml" filepath="$PROJECT_DIR$/serviceDiscovery/serviceDiscovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sprinboot-microservice.iml" filepath="$PROJECT_DIR$/.idea/sprinboot-microservice.iml" />
     </modules>

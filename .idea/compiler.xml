@@ -7,8 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="employeeservice" />
+        <module name="eurekaserver" />
+        <module name="gatewayserver" />
         <module name="config-server" />
+        <module name="employeeservice" />
         <module name="serviceDiscovery" />
         <module name="departmentservices" />
         <module name="configserver" />
@@ -20,7 +22,9 @@
       <module name="configserver" target="17" />
       <module name="departmentservices" target="17" />
       <module name="employeeservice" target="17" />
+      <module name="eurekaserver" target="17" />
       <module name="gateway" target="17" />
+      <module name="gatewayserver" target="17" />
       <module name="service-registry" target="11" />
       <module name="serviceDiscovery" target="17" />
     </bytecodeTargetLevel>
@@ -31,7 +35,9 @@
       <module name="configserver" options="-parameters" />
       <module name="departmentservices" options="-parameters" />
       <module name="employeeservice" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="gatewayserver" options="-parameters" />
       <module name="service-registry" options="-parameters" />
       <module name="serviceDiscovery" options="-parameters" />
     </option>
