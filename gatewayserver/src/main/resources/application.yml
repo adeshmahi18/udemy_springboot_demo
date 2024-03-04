@@ -19,6 +19,9 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      httpclient:
+        connect-timeout: 1000 #which the use of gateway should reach the particular server with in 1 seconds
+        response-timeout: 5s # the response should with in 5 sec
 
 management:
   endpoints:
@@ -38,3 +41,11 @@ info:
   app:
     name: gatewayserver
     description: "gatewayserver"
+
+resilience.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 50000

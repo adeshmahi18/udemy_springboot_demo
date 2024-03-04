@@ -43,19 +43,26 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         //System.out.println("====================="+employee.getDepartmentCode());
 
-         DepartmentDto departmentDto = apiClient.getDepartment(employee.getDepartmentCode());
+         DepartmentDto departmentDto = new DepartmentDto();
+         departmentDto=null;
+          departmentDto = apiClient.getDepartment(employee.getDepartmentCode());
 
-        EmployeeDto employeeDto = new EmployeeDto(
-                employee.getId(),
-                employee.getFirstName(),
-                employee.getLastName(),
-                employee.getEmail(),
-                employee.getDepartmentCode()
-        );
+         System.out.println("departmentDto==="+departmentDto);
+            EmployeeDto employeeDto = new EmployeeDto(
+                    employee.getId(),
+                    employee.getFirstName(),
+                    employee.getLastName(),
+                    employee.getEmail(),
+                    employee.getDepartmentCode()
+            );
 
          APIResponseDto apiResponseDto = new APIResponseDto();
          apiResponseDto.setEmployee(employeeDto);
-         apiResponseDto.setDepartment(departmentDto);
+         if(departmentDto!=null) {
+             apiResponseDto.setDepartment(departmentDto);
+         }else{
+             apiResponseDto.setDepartment(null);
+         }
         return apiResponseDto;
     }
 
