@@ -30,6 +30,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Override
     public DepartmentDto getDepartmentByCode(String departmentCode) {
 
+        System.out.println("departmentCode===="+departmentCode);
         Department department = departmentRepository.findByDepartmentCode(departmentCode);
 
         DepartmentDto departmentDto = DepartmentMapper.mapToDepartmentDto(department);

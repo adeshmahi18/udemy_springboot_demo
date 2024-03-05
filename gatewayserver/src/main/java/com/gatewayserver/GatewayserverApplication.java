@@ -23,16 +23,16 @@ public class GatewayserverApplication {
 	public RouteLocator eazyBankRouteConfig(RouteLocatorBuilder routeLocatorBuilder) {
 		return routeLocatorBuilder.routes()
 				.route(p -> p
-						.path("/rcs/employee/**")
-						.filters( f -> f.rewritePath("/rcs/employee/(?<segment>.*)","/${segment}")
+						.path("/employee/**")
+						.filters( f -> f.rewritePath("/employee/(?<segment>.*)","/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
 								//.retry(retryConfig -> retryConfig.setRetries(2).setMethods(HttpMethod.GET)
 										//.setBackoff(Duration.ofSeconds(100), Duration.ofMillis(1000),2, true))
 								.circuitBreaker(config -> config.setName("employeeCircuitBreaker"))	)
 						.uri("lb://EMPLOYEE"))
 				.route(p -> p
-						.path("/rcs/department/**")
-						.filters( f -> f.rewritePath("/rcs/employee/(?<segment>.*)","/${segment}")
+						.path("/department/**")
+						.filters( f -> f.rewritePath("/department/(?<segment>.*)","/${segment}")
 								.addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
 								.circuitBreaker(config -> config.setName("departmentCircuitBreaker")
 										.setFallbackUri("forward:/contactSupport")))

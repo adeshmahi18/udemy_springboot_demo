@@ -48,4 +48,4 @@ resilience.circuitbreaker:
       slidingWindowSize: 10
       permittedNumberOfCallsInHalfOpenState: 2
       failureRateThreshold: 50
-      waitDurationInOpenState: 50000
+      waitDurationInOpenState: 10000

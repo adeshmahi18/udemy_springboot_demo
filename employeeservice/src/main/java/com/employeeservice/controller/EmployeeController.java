@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RefreshScope
-@RequestMapping("api/employees")
- public class EmployeeController {
+  public class EmployeeController {
     ////-Dspring.profiles.active=test
     @Autowired
     private EmployeeService employeeService;
@@ -30,7 +29,7 @@ import org.springframework.web.bind.annotation.*;
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/api/employees/{id}")
     public ResponseEntity<APIResponseDto> getEmployeeByID(@PathVariable("id") Long employeeId){
 
         System.out.print("appName==="+appName);

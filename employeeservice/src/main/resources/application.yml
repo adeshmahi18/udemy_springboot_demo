@@ -12,9 +12,11 @@ spring:
     hibernate:
       ddl-auto: update
   cloud:
-    openfeign:
-      circuitbreaker:
-        enabled: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
 resilience:
   circuitbreaker:
