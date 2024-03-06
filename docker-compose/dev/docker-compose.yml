@@ -1,0 +1,55 @@
+services:
+  config-server:
+    image: "bala285164/config:t1"
+    container_name: configserver-ms
+    ports:
+      - 8000:8000
+    healthcheck:
+      test: "curl --fail --silent http://localhost:8888/actuator/health/readiness | grep Up || exit 1"
+      interval: 10s
+      timeout: 5w
+      retries: 10
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bala285164
+  employee:
+    image: "bala285164/employee:t1"
+    container_name: employee-ms
+    ports:
+      - 8081:8081
+    depends_on:
+      config-server:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bala285164
+    environment:
+      SPRING_APPLICATION_NAME: employee
+      SPRING_CONFIG_IMPORT: "configserver:http://config-server:8888"
+      SPRING_PROFILE_ACTIVE: test
+
+  department:
+    image: "bala285164/department:t1"
+    container_name: department-ms
+    ports:
+      - 8080:8080
+    depends_on:
+      config-server:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - bala285164
+
+networks:
+  bala285164:
+    driver: bridge
